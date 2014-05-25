@@ -95,7 +95,6 @@ describe('Cases', function() {
 	});
 
 	it('should fetch case', function(done) {
-		console.log(caseEntry);
 		api.caseBrowse(caseEntry, function(error, result) {
 			if (error) {
 				console.log(error);
@@ -146,6 +145,22 @@ describe('Case Citator', function() {
 				console.log(error);
 			}
 			result.should.have.property('citedLegislations');
+			done();
+		})
+	});
+});
+
+describe('Search', function() {
+	it('should search', function(done) {
+		api.search({
+			fullText: 'estoppel',
+			resultCount: 7
+		}, function(error, result) {
+			if (error) {
+				console.log(error);
+			}
+			result.should.have.property('results');
+			result.results.length.should.eql(7);
 			done();
 		})
 	});
