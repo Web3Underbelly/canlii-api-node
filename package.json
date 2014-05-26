@@ -1,7 +1,10 @@
 {
   "name": "canlii-api",
-  "repository": "https://github.com/webarnes/canlii-node",
-  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webarnes/canlii-node"
+  },
+  "version": "0.1.1",
   "main": "./lib/canlii",
   "engines": {
     "node": "*"
@@ -18,5 +21,23 @@
     "mocha": "~1.13.0",
     "should": "~2.0.1",
     "travis-cov": "~0.2.4"
-  }
+  },
+  "description": "canlii-api-node",
+  "bugs": {
+    "url": "https://github.com/webarnes/canlii-node/issues"
+  },
+  "homepage": "https://github.com/webarnes/canlii-node",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "canlii",
+    "law",
+    "api"
+  ],
+  "author": "William Barnes <william@webarnes.ca>",
+  "license": "MIT"
 }
