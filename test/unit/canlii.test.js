@@ -165,3 +165,26 @@ describe('Search', function() {
 		})
 	});
 });
+
+describe('Query by URL', function() {
+	it('should query cases', function(done) {
+		api.queryByUrl('http://www.canlii.org/en/ca/scc/doc/2009/2009scc4/2009scc4.html', function(error, result) {
+			result.citation.should.eql('2009 SCC 4, [2009] 1 SCR 104');
+			done();
+		});
+	});
+
+	it('should query legislation', function(done) {
+		api.queryByUrl('http://www.canlii.org/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html', function(error, result) {
+			result.citation.should.eql('RSC 1985, c C-46');
+			done();
+		});
+	});
+
+	it('should query regulations', function(done) {
+		api.queryByUrl('http://www.canlii.org/en/ca/laws/regu/si-93-169/latest/si-93-169.html', function(error, result) {
+			result.citation.should.eql('SI/93-169');
+			done();
+		});
+	});
+});
