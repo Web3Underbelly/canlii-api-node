@@ -1,7 +1,7 @@
 {
   "name": "canlii-api",
   "repository": "https://github.com/webarnes/canlii-node",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./lib/canlii",
   "engines": {
     "node": "*"
